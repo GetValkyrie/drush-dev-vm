@@ -13,7 +13,7 @@ if [ $? -eq 1 ]; then
 
   ansible_dir=/usr/local/lib/ansible/
   if [ ! -d $ansible_dir ]; then
-    git clone --depth=1 git://github.com/ansible/ansible.git $ansible_dir
+    git clone --recursive --depth=1 git://github.com/ansible/ansible.git $ansible_dir
   fi
 
   cd $ansible_dir
