@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  roles:
+    - role: geerlingguy.drush
+  tasks:
+    - name: Ensure optional dependencies are installed
+      apt:
+        name: "{{ item }}"
+        state: installed
+      with_items:
+        - bzip2
+        - bzr
+        - gzip
+        - subversion
+        - unzip
+        - mysql-server
+        - php5-mysql
+        #- php5-xdebug
+        #- php5-xhprof

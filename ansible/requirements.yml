@@ -1,0 +1,3 @@
+- name: geerlingguy.drush
+  src: https://github.com/geerlingguy/ansible-role-drush
+  version: master
