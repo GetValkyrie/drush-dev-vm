@@ -15,6 +15,18 @@
         - unzip
         - mysql-server
         - php5-mysql
-        - tree
-        #- php5-xdebug
-        #- php5-xhprof
+
+    - name: Installing zsh, vim, git, tmux, etc.
+      apt:
+        name: "{{ item }}"
+        state: installed
+      with_items:
+      - zsh
+      - tmux
+      - htop
+      - tree
+
+    - name: Installing spf13-vim, The Ultimate Vim Distribution (http://vim.spf13.com)
+      shell: curl https://j.mp/spf13-vim3 -L -o - | sh
+
+
