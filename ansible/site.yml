@@ -15,5 +15,6 @@
         - unzip
         - mysql-server
         - php5-mysql
+        - tree
         #- php5-xdebug
         #- php5-xhprof
